@@ -3,6 +3,7 @@ package com.zkyouxi.pratical_pro;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -47,7 +48,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
         ((ImageView) findViewById(R.id.wecat)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "点击微信", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this, TestActivity.class);
+                startActivity(intent);
+//                Toast.makeText(MainActivity.this, "点击微信", Toast.LENGTH_SHORT).show();
             }
         });
 //        A a = new A();
